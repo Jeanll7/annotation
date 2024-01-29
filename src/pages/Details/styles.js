@@ -4,17 +4,12 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
 
-  display: grid;
-  grid-template-rows: 105px auto;
-  grid-template-areas: 
-  "header"
-  "content";
-
-  /* overflow-y: hidden; */
+  display: flex;
+  flex-direction: column;
 
   > main {
-    grid-area: content;
-    overflow-y: scroll;
+    flex: 1;
+    overflow-y: auto;
     padding: 64px 0;
   }
 `;
@@ -34,12 +29,11 @@ export const Links = styled.ul`
 export const Content = styled.div`
   max-width: 550px;
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
 
   > button:first-child {
-    align-self: end;
+    align-self: flex-end;
   }
 
   > h1 {
@@ -60,28 +54,9 @@ export const Content = styled.div`
     position: relative;
     top: -20px;
 
-    > h1, p {
+    > h1 {
       position: relative;
       top: -20px;
-      margin-bottom: -20px;
     }
   }
 `;
-
-
-// FLEXBOX
-// export const Container = styled.div`
-//   width: 100%;
-//   height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-// `;
-
-// export const Header = styled.header`
-//   height: 105px;
-// `;
-
-// export const Content = styled.div`
-//   flex-grow: 1;
-// `;
-
